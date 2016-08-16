@@ -166,12 +166,22 @@ PORTFOLIO SECTION
     background-color: rgba(255, 255, 255, 0.1); 
 }
 
+.portOrbit {
+	height: auto;
+}
+
 .portSlide {
 	padding: 0 30px;
 }
 /* ---------------------------------------
 CONTACT SECTION
 -----------------------------------------*/
+
+.contactWrapper {
+	width: 70%;
+	max-width: 1100px;
+	margin: 0 auto;
+}
 
 .contact {
 	padding: 60px 50px;
@@ -186,7 +196,19 @@ CONTACT SECTION
 	font-weight: bold;
 }
 
+.formButton {
+	text-align: center;
+}
 
+.formButton button{
+	font-family: 'Roboto', sans-serif;
+	border-radius: 4px;
+	background-color: #ff3a20;
+}
+
+.formButton button:hover {
+	background-color: #ff4d36;
+}
 /* ---------------------------------------
 FOOTER
 -----------------------------------------*/
@@ -251,6 +273,17 @@ MODAL
 	border-radius: 4px;
 	border: 1px solid #c9cac6;
 	padding: 5px;
+	height: 50%;
+	width: 50%;
+}
+
+.modalPara {
+	padding: 20px 0px;
+}
+
+.appStoreLogo {
+	height: 45px;
+	width: 140px;
 }
 
 /* ---------------------------------------

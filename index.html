@@ -90,7 +90,7 @@
 						</div>
 					</div>
 
-					<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
+					<div class="orbit portOrbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
 						<ul class="orbit-container">
 							<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
 							<button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
@@ -134,7 +134,7 @@
 										<span>Project Title: </span><p>cathalskelton.com</p>
 										<span>Client: </span><p>Cathal Skelton - Software Developer</p>
 										<span>Released: </span><p>August 2016</p>
-										<span>Summary: </span><p>Personal portfolio website of Cathal Skelton (Me).</p>
+										<span>Summary: </span><p>Personal portfolio website of Cathal Skelton.</p>
 										<button class="button" data-open="cSkeltonModal">More Information</button>
 									</div>
 								</div>
@@ -152,37 +152,50 @@
 
       		<!-- CONTACT SECTION -->
       		<section class="contact" id="contact">
-      			<div class="wrapper">
-					<form>
+      			<div class="contactWrapper">
+					<form data-abide>
 						<div class="row">
 							<div class="column">
 								<h2>Contact</h2>
 								<hr>
 							</div>
 						</div>
-						<div class="row">
-							<div class="medium-6 columns">
-								<label>First Name
-									<input type="text" placeholder="Jean-Luc">
-								</label>
-							</div>
-							<div class="medium-6 columns">
-								<label>Last Name
-									<input type="text" placeholder="Picard">
-								</label>
-							</div>
-							<div class="medium-12 columns">
-								<label>Email Address
-									<input type="email" placeholder="example@mail.com">
-								</label>
-							</div>
-							<div class="medium-12 columns">
-								<label>Message
-									<textarea placeholder="Message..."></textarea>
-								</label>
-							</div>
+						<div data-abide-error class="alert callout" style="display: none;">
+							<p><i class="fi-alert"></i>There are some errors in your form.</p>
 						</div>
-						
+						<div class="row">
+						<div class="columns small-12 medium-6">
+						<label>
+							Name:
+							<input type="text" required>
+							<span class="form-error">This field is required.</span>
+						</label>
+						</div>
+						<div class="columns small-12 medium-6">
+						<label>
+							Email:
+							<input type="email" required>
+							<span class="form-error">This field is required.</span>
+						</label>
+						</div>
+						<div class="columns small-12 medium-12">
+						<label>
+							Subject:
+							<input type="text" required>
+							<span class="form-error">This field is required.</span>
+						</label>
+						</div>
+						<div class="columns small-12 medium-12">
+						<label>
+							Message:
+							<textarea type="text" required></textarea>
+							<span class="form-error">This field is required.</span>
+						</label>
+						</div>
+						</div>
+						<div class="formButton">
+							<button class="button" type="submit" value="Submit">Submit</button>
+						</div>
 					</form>
       			</div>
       		</section>
@@ -218,11 +231,11 @@
                 <p>Javascript, Python</p>
               </div>
       			</div>
-						<div class="wrapper row footerBottom">
-							<div class="column small-12 medium-12">
-								Copyright &copy; Cathal Skelton (CSkelDevelopment) 2016
-							</div>
-						</div>
+				<div class="wrapper row footerBottom">
+					<div class="column small-12 medium-12">
+						Copyright &copy; Cathal Skelton (CSkelDevelopment) 2016
+					</div>
+				</div>
       		</footer>
         </div>
       </div>
@@ -231,25 +244,26 @@
 		<!-- PORTFOLIO MODALS -->
 		<div class="large reveal" id="qubModal" data-reveal>
 			<div class="wrapper modalDesc">
-			<h1>QUB Libertarian Society App</h1>
-			<img class="modalImage" src="img/QUBApp.png"/>
-			<p>The QUB Libertarian Society App began as a personal project that I undertook in order to become familiar with the new Ionic 2 framework. However, as I developed it, it became clear that the app could serve a functional purpose for the QUB Libertarian Society, which I established back in 2013, at various recruitment fairs, allowing students who didn't have the time to stop and talk to download the app, find out what the society was all about and sign up through the app itself.</p>
-			<p>Due to it being a personal project, the app in only currently availabe on Android devices.</p>
-			<span>Client: <a href="https://www.facebook.com/qublibertariansociety">QUB Libertarian Society</a></span> <span>Date: <a href="#">June 2016</a></span> <span>Service: <a href="#">Android App</a></span>
-			<button class="close-button" data-close aria-label="Close modal" type="button">
-				<span aria-hidden="true">&times;</span>
-			</button>
+				<h1>QUB Libertarian Society App</h1>
+				<img class="modalImage" src="img/QUBApp.png"/><br>
+				<span><strong>Client: </strong><a href="https://www.facebook.com/qublibertariansociety">QUB Libertarian Society</a></span> <span><strong>Date: </strong><a href="#">June 2016</a></span> <span><strong>Service: </strong><a href="#">Android App</a></span>
+				<p class="modalPara">The QUB Libertarian Society App began as a personal project that I undertook in order to become familiar with the new Ionic 2 framework. However, as I developed it, it became clear that the app could serve a functional purpose for the QUB Libertarian Society, which I established back in 2013, at various recruitment fairs, allowing students who didn't have the time to stop and talk to download the app, find out what the society was all about and sign up through the app itself.</p>
+				<p>Due to it being a personal project, the app in only currently availabe on Android devices.</p>
+				<a href="https://play.google.com/store/apps/details?id=com.cskeldev.qubLibertarianSocietyApp&hl=en_GB"><img class="appStoreLogo" src="img/get-it-on-google-play.png"/></a>
+				<button class="close-button" data-close aria-label="Close modal" type="button">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
 		</div>
 
 		<div class="large reveal" id="iiicModal" data-reveal>
 			<div class="wrapper modalDesc">
 				<h1>Welcome to Boston App</h1>
-				<img class="modalImage" src="img/iiicApp.png"/>
-				<p>Built using the Ionic Framework, the Welcome to Boston app was the first project I worked on at <a href="http://www.aptcode.co.uk">Aptcode Solutions</a>. The purpose of the app was to give both Android and iOS users a new way of gaining access to information and services provided by the Irish International Immigration Center in Boston. I personally lead the development of the app from start to finish, from writing the initial proposal bid, to designing, coding, testing and releasing the app.</p><br />
-				<a href='https://play.google.com/store/apps/details?id=com.ionicframework.boston659790&hl=en_GB&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/></a>
-				<a href="https://geo.itunes.apple.com/gb/app/welcome-to-boston/id1107525932?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:165px;height:40px;"></a>
-				<p>Below is a promotional video made for the app's release and was presented at the Irish International Immigrant Center's annual Business Leaders Breakfast on the 28th April 2016. It was produced by InterMedia Ireland, a partner company of Aptcode Soultions.</p>				<div class="flex-video">
+				<img class="modalImage" src="img/iiicApp.png"/><br>
+				<span><strong>Client: </strong><a href="http://www.iiicenter.org/">Irish International Immigrant Center, Boston</a></span> <span><strong>Date: </strong><a>April 2016</a></span> <span><strong>Service: </strong><a>Cross-Platform App</a></span>
+				<p class="modalPara">Built using the Ionic Framework, the Welcome to Boston app was the first project I worked on at <a href="http://www.aptcode.co.uk">Aptcode Solutions</a>. The purpose of the app was to give both Android and iOS users a new way of gaining access to information and services provided by the Irish International Immigration Center in Boston. I personally lead the development of the app from start to finish, from writing the initial proposal bid, to designing, coding, testing and releasing the app.</p>
+			    <a href="https://play.google.com/store/apps/details?id=com.ionicframework.boston659790&hl=en_GB"><img class="appStoreLogo" src="img/get-it-on-google-play.png"/></a> <a href="https://geo.itunes.apple.com/gb/app/welcome-to-boston/id1107525932?mt=8"><img class="appStoreLogo" src="img/AppStoreLogo.png"/></a>
+				<p class="modalPara">Below is a promotional video made for the app's release and was presented at the Irish International Immigrant Center's annual Business Leaders Breakfast on the 28th April 2016. It was produced by InterMedia Ireland, a partner company of Aptcode Soultions.</p>		<div class="flex-video">
 					<iframe src="https://player.vimeo.com/video/163815462" width="480" height="320" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 					<p><a href="https://vimeo.com/163815462">IIIC Aptcode</a> from <a href="https://vimeo.com/intermediaireland">InterMedia Ireland</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
 				</div>
@@ -260,13 +274,14 @@
 		</div>
 
 		<div class="large reveal" id="cSkeltonModal" data-reveal>
-			<div class="wrapper">
-			<h1>Awesome. I Have It.</h1>
-			<p class="lead">Your couch. It is mine.</p>
-			<p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-			<button class="close-button" data-close aria-label="Close modal" type="button">
-				<span aria-hidden="true">&times;</span>
-			</button>
+			<div class="wrapper modalDesc">
+				<h1>cathalskelton.com</h1>
+				<img class="modalImage" src="img/cSkeltonPic.png"/><br>
+				<span><strong>Client: </strong><a>Cathal Skelton - Software Developer</a></span> <span><strong>Date: </strong><a>August 2016</a></span> <span><strong>Service: </strong><a>Website</a></span>
+				<p class="modalPara">I have included my own portfolio website as I have developed it myself, choosing not to take advantage of the many templates out there as I wanted to learn how a modern responsive site was put together instead of taking a short cut. The website was built utilising the <a href="http://foundation.zurb.com/">Foundation6</a> front-end framework and is hosted on Microsoft Azure.</p>
+				<button class="close-button" data-close aria-label="Close modal" type="button">
+					<span aria-hidden="true">&times;</span>
+				</button>
 			</div>
 		</div>
 
