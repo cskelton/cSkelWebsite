@@ -153,7 +153,8 @@
       		<!-- CONTACT SECTION -->
       		<section class="contact" id="contact">
       			<div class="contactWrapper">
-					<form data-abide>
+					<form data-abide id="contactForm">
+						<div class="contactform">
 						<div class="row">
 							<div class="column">
 								<h2>Contact</h2>
@@ -167,34 +168,28 @@
 						<div class="columns small-12 medium-6">
 						<label>
 							Name:
-							<input type="text" required>
+							<input id="name" type="text" required>
 							<span class="form-error">This field is required.</span>
 						</label>
 						</div>
 						<div class="columns small-12 medium-6">
 						<label>
 							Email:
-							<input type="email" required>
-							<span class="form-error">This field is required.</span>
-						</label>
-						</div>
-						<div class="columns small-12 medium-12">
-						<label>
-							Subject:
-							<input type="text" required>
+							<input id="email" type="email" required>
 							<span class="form-error">This field is required.</span>
 						</label>
 						</div>
 						<div class="columns small-12 medium-12">
 						<label>
 							Message:
-							<textarea type="text" required></textarea>
+							<textarea id="message" type="text" required></textarea>
 							<span class="form-error">This field is required.</span>
 						</label>
 						</div>
 						</div>
 						<div class="formButton">
 							<button class="button" type="submit" value="Submit">Submit</button>
+						</div>
 						</div>
 					</form>
       			</div>
@@ -289,6 +284,31 @@
 		<script src="js/vendor/what-input.js"></script>
 		<script src="js/vendor/foundation.js"></script>
 		<script src="js/app.js"></script>
+
+		<script>
+		$('#contactForm')
+		.on('valid', function() {
+			var name = $("input#name").val();
+			var email = $("input#email").val();
+			var message = $("input#message").val();
+
+			var dataString = 'name=' + name + '&email=' + email + '&message=' + message;
+
+			$.ajax({
+				type: "POST",
+				url: "php/mail.php",
+				data: dataString,
+				success: function() {
+					$('.contactform').html("<div id='thanks'></div>");
+						$('#thanks').html("<h2>Your message has been submitted</h2>")
+						.hide()
+						.fadeIn(1500);
+				},
+			});
+			return false;
+		});
+		</script>
+
   </body>
 
 </html>
