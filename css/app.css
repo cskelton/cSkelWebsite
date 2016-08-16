@@ -295,4 +295,8 @@ MEDIA QUERY
 	.nav-desktop {
 		display: none;
 	}
+
+	.portDesc {
+		display: none;
+	}
 }
