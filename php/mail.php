@@ -8,7 +8,6 @@ $msg = "
 
 Name: $name
 Email: $email
-Subject: $subject
 Message: $message
 ";
 
