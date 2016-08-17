@@ -153,7 +153,7 @@
       		<!-- CONTACT SECTION -->
       		<section class="contact" id="contact">
       			<div class="contactWrapper">
-					<form data-abide id="contactForm">
+					<form data-abide id="contactForm" method="POST" action="php/mail.php">
 						<div class="row">
 							<div class="column">
 								<h2>Contact</h2>
@@ -167,29 +167,22 @@
 						<div class="columns small-12 medium-6">
 						<label>
 							Name:
-							<input id="name" type="text" required>
-							<span class="form-error">This field is required.</span>
+							<input id="name" type="text" placeholder="Jean-Luc Picard" required>
+							<span class="form-error">Your name is required.</span>
 						</label>
 						</div>
 						<div class="columns small-12 medium-6">
 						<label>
 							Email:
-							<input id="email" type="email" required>
-							<span class="form-error">This field is required.</span>
-						</label>
-						</div>
-						<div class="columns small-12 medium-12">
-						<label>
-							Subject:
-							<input id="subject" type="text" required>
-							<span class="form-error">This field is required.</span>
+							<input id="email" type="email" placeholder="example@mail.com" required>
+							<span class="form-error">A valid email address is required.</span>
 						</label>
 						</div>
 						<div class="columns small-12 medium-12">
 						<label>
 							Message:
-							<textarea id="message" type="text" required></textarea>
-							<span class="form-error">This field is required.</span>
+							<textarea id="message" type="text" placeholder="Enter your message..." required></textarea>
+							<span class="form-error">A message is required.</span>
 						</label>
 						</div>
 						</div>
